@@ -1,21 +1,17 @@
 import os
-#-------------------------------------GET RID OF TF DEPRECATION WARNINGS--------------------------------------#
 import warnings
-warnings.filterwarnings('ignore', category=FutureWarning)
-
+warnings.filterwarnings('ignore', category=FutureWarning)  # GET RID OF TF DEPRECATION WARNINGS #
 import tensorflow as tf
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
-
-from psychrnn.tasks.perceptual_discrimination import PerceptualDiscrimination
-from psychrnn.backend.models.basic import Basic
-
 import tensorflow as tf
 from matplotlib import pyplot as plt
 # %matplotlib inline
 print(f"tf.__version__={tf.__version__}")
-
 import numpy as np
 import random
+
+from psychrnn.tasks.perceptual_discrimination import PerceptualDiscrimination
+from psychrnn.backend.models.basic import Basic
 
 seed=2020
 
